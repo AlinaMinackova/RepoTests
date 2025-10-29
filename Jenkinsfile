@@ -8,7 +8,7 @@ pipeline {
 
     triggers {
         // Автозапуск по пушам (можно заменить на webhook)
-        pollSCM('H/5 * * * *')
+        pollSCM('* * * * *')
     }
 
     options {
