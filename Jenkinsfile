@@ -27,6 +27,7 @@ pipeline {
         stage('Build Backend Jar & Docker Image') {
             steps {
                 dir('backend') {
+                    sh 'chmod +x mvnw'
                     sh './mvnw clean package -DskipTests'
                     sh 'docker build -t my-app:latest .'
                 }
