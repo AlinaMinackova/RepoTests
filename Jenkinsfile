@@ -37,6 +37,7 @@ pipeline {
         stage('Run Tests with Allure') {
             steps {
                 echo "Запуск интеграционных тестов через Gradle..."
+                sh 'chmod +x gradlew'
                 sh './gradlew clean test'
             }
 
