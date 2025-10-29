@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:22.21.0-alpine3.22' }
+    }
 
     environment {
         APP_IMAGE = "my-app:latest"
